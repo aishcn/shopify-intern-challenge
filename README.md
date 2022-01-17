@@ -8,7 +8,7 @@ Given some sample data, write a program to answer the following: click here to a
 
 On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis.
 
-(i) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
+***(i) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.***
 
 **Answer**: $3145.13 is not the AOV that we want. We get this value by dividing total sum of order_amount by number of orders. This is wrong because the formula didn't consider the fact that an order can have multiple items.
 
@@ -16,26 +16,18 @@ Also, we see 17 outliers from shop 42 which skew the average therefore we need t
 
 *Do you know Michal Jordan's Air Jordan 4 Starfish (collector's model) is priced at $154,990 and several Nike and Air Jordan sneakers are listed above $100,000 and even above $200,000?*
 
-b. As well, the average order will also be skewed because shop 78 is selling
-each shoe for about $27,725; sneakers should not be this high!
-c. Therefore after taking out the anomalous shops, shop 42 and 78, we get
-an average order value of $300, which makes sense as some customers
-purchase more than 1 item during their visit!
-■ We also see that the average number of items purchased (after
-removing outliers) is about 2 items; this seems correct!
-
-(ii) What metric would you report for this dataset?
+***(ii) What metric would you report for this dataset?***
 
 **Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items. By following this method, we would consider the fact that an order can have multiple items.
 
-(iii) What is its value?
+***(iii) What is its value?***
 
 **Answer**:  $357.92
 
 #### Question 2
 For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
-(i) How many orders were shipped by Speedy Express in total?
+***(i) How many orders were shipped by Speedy Express in total?***
 **Answer**: 54 orders were shipped by Speedy Express in total
 
 ```
@@ -44,7 +36,7 @@ LEFT JOIN [Shippers] s ON o.ShipperID = s.ShipperID
 WHERE s.ShipperName = 'Speedy Express'
 ```
 
-(ii) What is the last name of the employee with the most orders?
+***(ii) What is the last name of the employee with the most orders?***
 **Answer**: Peacock is the last name of the employee with the most orders, about 40
 
 ```
@@ -56,7 +48,7 @@ ORDER BY  total_orders DESC
 LIMIT 1
 ```
 
-(iii) What product was ordered the most by customers in Germany?
+***(iii) What product was ordered the most by customers in Germany?***
 **Answer**: Boston Crab Meat was the product ordered the most by customers in Germany, about 160. In this problem, product most ordered is defined as total quantity of the product ordered and not how many times it was ordered.
 
 ```
