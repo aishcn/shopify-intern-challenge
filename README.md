@@ -9,12 +9,15 @@ Given some sample data, write a program to answer the following: click here to a
 On Shopify, we have exactly 100 sneaker shops, and each of these shops sells only one model of shoe. We want to do some analysis of the average order value (AOV). When we look at orders data over a 30 day window, we naively calculate an AOV of $3145.13. Given that we know these shops are selling sneakers, a relatively affordable item, something seems wrong with our analysis.
 
 (i) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
+
 **Answer**: The wrong average was calculated using this method: total of all order values/ number of order_values. This is wrong because the formula didn't consider the fact that an order can have multiple items.
 
 (ii) What metric would you report for this dataset?
+
 **Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items. By following this method, we would consider the fact that an order can have multiple items.
 
 (iii) What is its value?
+
 **Answer**:  $357.92
 
 #### Question 2
