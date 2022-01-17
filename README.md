@@ -10,7 +10,7 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 ***(i) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.***
 
-**Answer**: $3145.13 is not the AOV that we want. We get this value by dividing total sum of order_amount by number of orders. This is wrong because the formula didn't consider the fact that an order can have multiple items.
+**Answer**: $3145.13 is not the AOV that we want. We get this value by dividing total sum of order_amount by number of orders. This is wrong because the formula didn't consider the fact that an order can have multiple items. For better readability and interpretability we can create a new column called `item_price` which will be order_amount/total_items. This is help us easily compare pricse of individual sneakers sold by different shops.
 
 Also, we see 17 outliers from shop 42 which skew the average therefore we need to evaluate whether these values are simply due to data entry error or these represent correct information. This shop gets large number of orders (2000 total items in some cases). Price for one sneaker at this shop is $352 which seems affordable compared to shop 78 and this might be the case where some supplier or other merchant is buying in a bulk order. This can be considered as one edge case. Another one is shop 78 selling sneakers for a VERY high price (like $25,725!!!) and is definitely not affordable. This again could be a data entry error or it could be a luxury designer brand or a limited edition autographed sneaker. 
 
@@ -18,11 +18,12 @@ Also, we see 17 outliers from shop 42 which skew the average therefore we need t
 
 ***(ii) What metric would you report for this dataset?***
 
-**Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items. By following this method, we would consider the fact that an order can have multiple items.
+**Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items since the metric used in question didn't consider the fact that an order can have multiple items. Due to the presence of outliers, using this metric or AOV will be skewed and would not be reflexive of the orders. Another approach would be using mode (most frequest order price) along with AOV. Relying only on AOV, would make the jump/drop in price look like a drastic change in customers’ buying habits, when it’s possible that all you’ve done is attract a few new customers. So if you’re using AOV and have a wide price range, you should keep an eye on your most frequently purchased items and look at the range between your highest and lowest orders. This will help ensure you get a more accurate view of buying trends.
 
 ***(iii) What is its value?***
 
-**Answer**:  $357.92
+**Answer**:  Corrected AOV: $357.92, Median:, Mode:
+
 
 #### Question 2
 For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
