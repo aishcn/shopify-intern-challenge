@@ -18,7 +18,39 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
 
 (i) How many orders were shipped by Speedy Express in total?
+**Answer**: 54 orders were shipped by Speedy Express in total
+
+```
+SELECT o.OrderID, o.ShipperID, s.ShipperID, s.ShipperName, COUNT(*) FROM [Orders] o
+LEFT JOIN [Shippers] s ON o.ShipperID = s.ShipperID
+WHERE s.ShipperName = 'Speedy Express'
+```
 
 (ii) What is the last name of the employee with the most orders?
+**Answer**: Peacock is the last name of the employee with the most orders, about 40
+
+```
+SELECT e.LastName, COUNT(DISTINCT(o.OrderID)) AS total_orders FROM  [Employees] e
+LEFT JOIN [Orders] o
+ON e.EmployeeID =  o.EmployeeID
+GROUP BY e.LastName
+ORDER BY  total_orders DESC
+LIMIT 1
+```
 
 (iii) What product was ordered the most by customers in Germany?
+**Answer**: Boston Crab Meat was the product ordered the most by customers in Germany, about 160. In this problem, product most ordered is defined as total quantity of the product ordered and not how many times it was ordered.
+
+```
+SELECT d.OrderID, p.ProductID, p.ProductName, SUM(d.Quantity) AS TotalQuantity FROM [Customers] c
+LEFT JOIN [Orders] o
+ON c.CustomerID = o.CustomerID
+LEFT JOIN [OrderDetails] d
+ON o.OrderID = d.OrderID
+LEFT JOIN [PRODUCTS] p
+ON d.ProductID = p.ProductID
+WHERE c.Country = 'Germany'
+GROUP BY p.ProductName
+ORDER BY TotalQuantity DESC
+LIMIT 1
+```
