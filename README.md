@@ -10,7 +10,19 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 (i) Think about what could be going wrong with our calculation. Think about a better way to evaluate this data.
 
-**Answer**: The wrong average was calculated using this method: total of all order values/ number of order_values. This is wrong because the formula didn't consider the fact that an order can have multiple items.
+**Answer**: $3145.13 is not the AOV that we want. We get this value by dividing total sum of order_amount by number of orders. This is wrong because the formula didn't consider the fact that an order can have multiple items.
+
+Also, we see 17 outliers from shop 42 which skew the average therefore we need to evaluate whether these values are simply due to data entry error or these represent correct information. This shop gets large number of orders (2000 total items in some cases). Price for one sneaker at this shop is $352 which seems affordable compared to shop 78 and this might be the case where some supplier or other merchant is buying in a bulk order. This can be considered as one edge case. Another one is shop 78 selling sneakers for a VERY high price (like $25,725!!!) and is definitely not affordable. This again could be a data entry error or it could be a luxury designer brand or a limited edition autographed sneaker. 
+
+*Do you know Michal Jordan's Air Jordan 4 Starfish (collector's model) is priced at $154,990 and several Nike and Air Jordan sneakers are listed above $100,000 and even above $200,000?*
+
+b. As well, the average order will also be skewed because shop 78 is selling
+each shoe for about $27,725; sneakers should not be this high!
+c. Therefore after taking out the anomalous shops, shop 42 and 78, we get
+an average order value of $300, which makes sense as some customers
+purchase more than 1 item during their visit!
+■ We also see that the average number of items purchased (after
+removing outliers) is about 2 items; this seems correct!
 
 (ii) What metric would you report for this dataset?
 
