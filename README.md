@@ -14,7 +14,7 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 Also, we see 17 outliers from shop 42 which skew the average therefore we need to evaluate whether these values are simply due to data entry error or these represent correct information. This shop gets large number of orders (2000 total items in some cases). Price for one sneaker at this shop is $352 which seems affordable compared to shop 78 and this might be the case where some supplier or other merchant is buying in a bulk order. This can be considered as one edge case. Another one is shop 78 selling sneakers for a VERY high price (like $25,725!!!) and is definitely not affordable. This again could be a data entry error or it could be a luxury designer brand or a limited edition autographed sneaker. 
 
-*Do you know Michal Jordan's Air Jordan 4 Starfish (collector's model) is priced at $154,990 and several Nike and Air Jordan sneakers are listed above $100,000 and even above $200,000?*
+*Do you know Michael Jordan's Air Jordan 4 Starfish (collector's model) is priced at $154,990 and several Nike and Air Jordan sneakers are listed above $100,000 and even above $200,000?*
 
 ***(ii) What metric would you report for this dataset?***
 
