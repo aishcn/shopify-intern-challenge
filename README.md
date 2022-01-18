@@ -18,12 +18,11 @@ Also, we see 17 outliers from shop 42 which skew the average therefore we need t
 
 ***(ii) What metric would you report for this dataset?***
 
-**Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items since the metric used in question didn't consider the fact that an order can have multiple items. Due to the presence of outliers, using this metric or AOV will be skewed and would not be reflexive of the orders. Another approach would be using mode (most frequest order price) along with AOV. Relying only on AOV, would make the jump/drop in price look like a drastic change in customers’ buying habits, when it’s possible that all you’ve done is attract a few new customers. So if you’re using AOV and have a wide price range, you should keep an eye on your most frequently purchased items and look at the range between your highest and lowest orders. This will help ensure you get a more accurate view of buying trends.
+**Answer**: The correct approach would be to divide the total of all order_values by the sum of total_items since the metric used in question didn't consider the fact that an order can have multiple items. Due to the presence of outliers, using this metric or AOV will be skewed and would not be reflexive of the orders. Therefore another approach along with AOV would be to use median which is unaffected by the outliers.
 
 ***(iii) What is its value?***
 
-**Answer**:  Corrected AOV: $357.92, Median:, Mode:
-
+**Answer**:  Corrected AOV: $357.92, Median: $284, Mode:
 
 #### Question 2
 For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
