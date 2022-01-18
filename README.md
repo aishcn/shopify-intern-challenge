@@ -22,7 +22,7 @@ Also, we see 17 outliers from shop 42 which skew the average therefore we need t
 
 ***(iii) What is its value?***
 
-**Answer**:  Corrected AOV: $357.92, Median: $284, Mode:
+**Answer**:  Corrected AOV: $357.92 (close to 75th percentile: $390), Median: $284
 
 #### Question 2
 For this question you’ll need to use SQL. Follow this link to access the data set required for the challenge. Please use queries to answer the following questions. Paste your queries along with your final numerical answers below.
