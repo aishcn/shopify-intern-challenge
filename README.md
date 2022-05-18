@@ -3,8 +3,6 @@
 
 #### *(Please refer to the code in the Jupyter notebook (.ipynb, .pdf) available in the repo)*
 
-Please complete the following questions, and provide your thought process/work. You can attach your work in a text file, link, etc. on the application page. Please ensure answers are easily visible for reviewers!
-
 #### Question 1:
 Given some sample data, write a program to answer the following (https://docs.google.com/spreadsheets/d/16i38oonuX1y1g7C_UAmiK9GkY7cS-64DfiDMNiR41LM/edit#gid=0)
 
