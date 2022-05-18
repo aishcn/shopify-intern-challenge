@@ -49,18 +49,19 @@ LIMIT 1
 ```
 
 ***(iii) What product was ordered the most by customers in Germany?***
-**Answer**: Boston Crab Meat was the product ordered the most by customers in Germany, about 160. In this problem, product most ordered is defined as total quantity of the product ordered and not how many times it was ordered.
+**Answer**: Gorgonzola Telino was the product ordered the most by customers in Germany, about 5.
 
 ```
-SELECT d.OrderID, p.ProductID, p.ProductName, SUM(d.Quantity) AS TotalQuantity FROM [Customers] c
-LEFT JOIN [Orders] o
+SELECT p.ProductName, c.Country, COUNT(o.OrderID) AS NumOrders FROM Customers c 
+LEFT JOIN Orders o 
 ON c.CustomerID = o.CustomerID
-LEFT JOIN [OrderDetails] d
+LEFT JOIN OrderDetails d
 ON o.OrderID = d.OrderID
-LEFT JOIN [PRODUCTS] p
+LEFT JOIN Products p
 ON d.ProductID = p.ProductID
 WHERE c.Country = 'Germany'
 GROUP BY p.ProductName
-ORDER BY TotalQuantity DESC
-LIMIT 1
+ORDER BY NumOrders DESC
+LIMIT 1;
+
 ```
