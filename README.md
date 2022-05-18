@@ -1,6 +1,6 @@
 ## **Shopify Fall 2022 Data Science Intern Challenge**
 ### *By Anjali Chauhan*
-### Date: 17/05/2022
+##### Date: 17/05/2022
 
 #### *(Please refer to the code in the Jupyter notebook (.ipynb, .pdf) available in the repo)*
 
