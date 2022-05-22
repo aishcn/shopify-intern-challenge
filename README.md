@@ -15,9 +15,9 @@ On Shopify, we have exactly 100 sneaker shops, and each of these shops sells onl
 
 - AOV calculated in the question: Total revenue/number of orders = `df.order_amount.sum()/len(df.order_id.unique())`
 
-- We see the average of `order_amount` is 3145.128 according to the above formula. We also see below why this is not a robust metric.
+- We see the average of `order_amount` is $3145.128 according to the above formula. We also see below why this is not a robust metric.
 
--  The max value of order_amount is 704000 with min value of 90 and 3rd quartile of 390 (way smaller than the max value).
+-  The max value of order_amount is $704000 with min value of $90 and 3rd quartile of $390 (way smaller than the max value).
 
 - Since mean is very sensitive to extreme values, the calculated value is not a very good AOV estimate due to skewness and that's why this amount is large.
 
